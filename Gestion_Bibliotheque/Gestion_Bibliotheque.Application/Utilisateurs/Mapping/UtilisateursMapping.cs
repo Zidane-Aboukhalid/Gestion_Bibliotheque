@@ -16,6 +16,7 @@ namespace Gestion_Bibliotheque.Application.Utilisateurs.Mapping
 			.ForMember(dest => dest.Adresse, opt => opt.MapFrom(src => src.Adresse))
 			.ForMember(dest => dest.Ecol, opt => opt.MapFrom(src => src.Ecol))
 			.ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+			.ForMember(dest => dest.Isblock, opt => opt.MapFrom(src => src.Isblock))
 			.ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.PasswordHash)).ReverseMap();
 
 			//CreateMap<Utilisateur,SelectUtilisateursDto>()

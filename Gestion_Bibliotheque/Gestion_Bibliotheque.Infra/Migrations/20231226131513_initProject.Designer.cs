@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gestion_Bibliotheque.Infra.Migrations
 {
     [DbContext(typeof(applicationDbContext))]
-    [Migration("20231225000717_mv1")]
-    partial class mv1
+    [Migration("20231226131513_initProject")]
+    partial class initProject
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,22 +37,22 @@ namespace Gestion_Bibliotheque.Infra.Migrations
                     b.HasData(
                         new
                         {
-                            RoleId = new Guid("7b398a20-6dae-4311-a78e-9fea5e7c4d00"),
+                            RoleId = new Guid("b3363f51-d847-45f3-a22f-3a4d70d57d3c"),
                             Name = "Administrateur"
                         },
                         new
                         {
-                            RoleId = new Guid("0f1072d5-e635-4cec-9d36-7c0aed643df7"),
+                            RoleId = new Guid("1652b814-0920-47ac-bc63-fd3a6aad4062"),
                             Name = "Etudiant"
                         },
                         new
                         {
-                            RoleId = new Guid("1d464c95-93f7-458a-84ed-b8ff32cc841f"),
+                            RoleId = new Guid("3b6cec93-a37b-4e01-b52d-7efa32c298a4"),
                             Name = "Etudiant_VIP"
                         },
                         new
                         {
-                            RoleId = new Guid("54f31f1d-38ff-462e-861d-49ece7862c17"),
+                            RoleId = new Guid("0fb9e156-a1ee-46f6-88db-bc37c9557d9d"),
                             Name = "Etudiant_Bronze"
                         });
                 });
@@ -74,6 +74,9 @@ namespace Gestion_Bibliotheque.Infra.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Isblock")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("JobInTech")
                         .HasColumnType("INTEGER");

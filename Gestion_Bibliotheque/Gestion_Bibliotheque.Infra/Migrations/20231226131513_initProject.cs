@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Gestion_Bibliotheque.Infra.Migrations
 {
     /// <inheritdoc />
-    public partial class mv1 : Migration
+    public partial class initProject : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,7 +36,8 @@ namespace Gestion_Bibliotheque.Infra.Migrations
                     PasswordHash = table.Column<string>(type: "TEXT", nullable: false),
                     Ecol = table.Column<string>(type: "TEXT", nullable: false),
                     Adresse = table.Column<string>(type: "TEXT", nullable: false),
-                    JobInTech = table.Column<bool>(type: "INTEGER", nullable: false)
+                    JobInTech = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Isblock = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,10 +98,10 @@ namespace Gestion_Bibliotheque.Infra.Migrations
                 columns: new[] { "RoleId", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("0f1072d5-e635-4cec-9d36-7c0aed643df7"), "Etudiant" },
-                    { new Guid("1d464c95-93f7-458a-84ed-b8ff32cc841f"), "Etudiant_VIP" },
-                    { new Guid("54f31f1d-38ff-462e-861d-49ece7862c17"), "Etudiant_Bronze" },
-                    { new Guid("7b398a20-6dae-4311-a78e-9fea5e7c4d00"), "Administrateur" }
+                    { new Guid("0fb9e156-a1ee-46f6-88db-bc37c9557d9d"), "Etudiant_Bronze" },
+                    { new Guid("1652b814-0920-47ac-bc63-fd3a6aad4062"), "Etudiant" },
+                    { new Guid("3b6cec93-a37b-4e01-b52d-7efa32c298a4"), "Etudiant_VIP" },
+                    { new Guid("b3363f51-d847-45f3-a22f-3a4d70d57d3c"), "Administrateur" }
                 });
 
             migrationBuilder.CreateIndex(

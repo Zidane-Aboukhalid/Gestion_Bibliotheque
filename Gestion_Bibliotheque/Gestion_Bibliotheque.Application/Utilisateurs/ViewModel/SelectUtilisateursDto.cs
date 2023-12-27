@@ -11,11 +11,9 @@ public class SelectUtilisateursDto {
 public string Nom { get; set; }
 public string Prenom { get; set; }
 public string Email { get; set; }
-
 public string PasswordHash { get; set; }
-
 public string Ecol { get; set; }
-
+public bool Isblock { get; set; }
 public string Adresse { get; set; }
-public bool JobInTech { get; set; } = false;
+public bool JobInTech { get; set; }
 }

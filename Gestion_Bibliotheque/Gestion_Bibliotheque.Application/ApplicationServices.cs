@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using Gestion_Bibliotheque.Application.Behaviours;
+using Gestion_Bibliotheque.Application.Utilisateurs.Services;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,13 +19,13 @@ namespace Gestion_Bibliotheque.Application
 		{
 			services.AddAutoMapper(Assembly.GetExecutingAssembly());
 			services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-
 			services.AddMediatR(ctg =>
 			{
 				ctg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
 				ctg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 			}
 			) ;
+			services.AddTransient<IUtilisateurService, UtilisateurService>();
 			return services;
 		}
 	}
