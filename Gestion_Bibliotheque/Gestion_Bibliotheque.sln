@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Bibliotheque.API", "Gestion_Bibliotheque.API\Gestion_Bibliotheque.API.csproj", "{5A008BF3-7EAE-4095-9578-1FC5A9C21577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gestion_Bibliotheque.API", "Gestion_Bibliotheque.API\Gestion_Bibliotheque.API.csproj", "{5A008BF3-7EAE-4095-9578-1FC5A9C21577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Bibliotheque.Domain", "Gestion_Bibliotheque.Domain\Gestion_Bibliotheque.Domain.csproj", "{5BE6FF22-DA93-43B8-BF8B-022A1D2545D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gestion_Bibliotheque.Domain", "Gestion_Bibliotheque.Domain\Gestion_Bibliotheque.Domain.csproj", "{5BE6FF22-DA93-43B8-BF8B-022A1D2545D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Bibliotheque.Application", "Gestion_Bibliotheque.Application\Gestion_Bibliotheque.Application.csproj", "{B7C196A7-9DD9-4C99-BC4E-79BD5701BC25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gestion_Bibliotheque.Application", "Gestion_Bibliotheque.Application\Gestion_Bibliotheque.Application.csproj", "{B7C196A7-9DD9-4C99-BC4E-79BD5701BC25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Bibliotheque.Infra", "Gestion_Bibliotheque.Infra\Gestion_Bibliotheque.Infra.csproj", "{BF857F45-69B8-48F1-9296-8C856F3C3753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gestion_Bibliotheque.Infra", "Gestion_Bibliotheque.Infra\Gestion_Bibliotheque.Infra.csproj", "{BF857F45-69B8-48F1-9296-8C856F3C3753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApp", "OcelotApp\OcelotApp.csproj", "{4D225D69-3266-4CE9-AC97-C9616D4F8D5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BF857F45-69B8-48F1-9296-8C856F3C3753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF857F45-69B8-48F1-9296-8C856F3C3753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF857F45-69B8-48F1-9296-8C856F3C3753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D225D69-3266-4CE9-AC97-C9616D4F8D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D225D69-3266-4CE9-AC97-C9616D4F8D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D225D69-3266-4CE9-AC97-C9616D4F8D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D225D69-3266-4CE9-AC97-C9616D4F8D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
