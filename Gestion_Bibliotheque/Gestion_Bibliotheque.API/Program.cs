@@ -1,5 +1,8 @@
+using Gestion_Bibliotheque.API.Services.Health;
 using Gestion_Bibliotheque.Application;
 using Gestion_Bibliotheque.Infra;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +33,10 @@ builder.Services.AddRateLimiter(op =>
 }
 );
 
+// add config in HeatthChecks
+
+builder.Services.AddHealthChecks()
+	.AddCheck<ApiHealthCheck>("jokesApichecks",tags: new string[] { "jokesApi"});
 
 
 var app = builder.Build();
@@ -47,5 +54,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.UseRateLimiter();
+
+
+// check Heatth Checks 
+
+app.MapHealthChecks("/HealthChecks" ,new HealthCheckOptions()
+{
+	Predicate =_=>true,
+	ResponseWriter=UIResponseWriter.WriteHealthCheckUIResponse
+
+});
 
 app.Run();
