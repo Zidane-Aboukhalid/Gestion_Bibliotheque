@@ -36,7 +36,7 @@ builder.Services.AddRateLimiter(op =>
 // add config in HeatthChecks
 
 builder.Services.AddHealthChecks()
-	.AddCheck<ApiHealthCheck>("jokesApichecks",tags: new string[] { "jokesApi"});
+	.AddCheck<ApiHealthCheck>("jokesApichecks",tags: new string[] { "jokesApi"}); 
 
 
 var app = builder.Build();
